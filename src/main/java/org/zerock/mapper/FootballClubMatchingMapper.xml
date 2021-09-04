@@ -3,5 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="org.zerock.mapper">
+<mapper namespace="org.zerock.mapper.FootballClubMatchingMapper">
+	<select id="test" resultType="org.zerock.domain.TestVO">
+		SELECT * FROM test
+	</select>
+
 </mapper>
