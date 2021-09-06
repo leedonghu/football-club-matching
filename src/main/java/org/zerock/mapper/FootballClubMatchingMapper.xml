@@ -7,5 +7,9 @@
 	<select id="test" resultType="org.zerock.domain.TestVO">
 		SELECT * FROM test
 	</select>
-
+	
+	<select id="footballClubName" resultType="String">
+		SELECT team FROM test
+		WHERE que = #{que} AND value = #{value}
+	</select>
 </mapper>

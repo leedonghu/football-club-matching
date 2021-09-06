@@ -45,8 +45,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		TestVO vo = service.test();
-		model.addAttribute("test", vo);
+
 		
 		return "home";
 	}
@@ -55,6 +54,8 @@ public class HomeController {
 	public void test(TestVO vo, Model model) {
 		log.info(vo.getQue1());
 		log.info(vo.getQue2());
+		
+		service.matchingProcess(vo);
 		model.addAttribute("test", vo);
 	}
 	

@@ -6,4 +6,6 @@ public interface FootballClubMatchingMapper {
 
 	TestVO test();
 
+	String footballClubName(String que, String value);
+
 }

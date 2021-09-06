@@ -6,4 +6,6 @@ public interface FootballClubMatchingService {
 
 	TestVO test();
 
+	void matchingProcess(TestVO vo);
+
 }

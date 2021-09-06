@@ -17,6 +17,11 @@
 <div class="container">
 	${test.que1 }
 	${test.que2 }
+	${test.que3 }
+	${test.que4 }
+	${test.que5 }
+	${test.que6 }
+	${test.que7 }
 </div>
 </body>
 </html>
