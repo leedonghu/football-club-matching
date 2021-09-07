@@ -27,7 +27,7 @@ public class FootballClubMatchingServiceImpl implements FootballClubMatchingServ
 
 
 	@Override
-	public void matchingProcess(TestVO vo) {
+	public int matchingProcess(TestVO vo) {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		
@@ -60,14 +60,59 @@ public class FootballClubMatchingServiceImpl implements FootballClubMatchingServ
 			}
 		}
 		
+		//많이 선택된 팀 카운트
+		int manu = 0;
+		int manc = 0;
+		int riv = 0;
+		int che = 0;
+		int tot = 0;
+		int ars = 0;
+		
 		for(int i=0; i<teamList2.size(); i++) {
 			
 			
 			switch(teamList2.get(i)) {
-			
+				case "맨유" : manu++;
+							  break;
+							  
+				case "맨시티" : manc++;
+								break;
+								
+				case "리버풀" : riv++;
+								break;
+				
+				case "첼시" : che++;
+							  break;
+							  
+				case "토트넘" : tot++;
+								break;
+								
+				case "아스날" : ars++;
+								break;
 			
 			}
 		}
+		
+		List<Integer> teamList3 = new ArrayList<>();
+		teamList3.add(manu);
+		teamList3.add(manc);
+		teamList3.add(riv);
+		teamList3.add(che);
+		teamList3.add(tot);
+		teamList3.add(ars);
+		
+		int max = teamList3.get(0);
+		int maxIndex = 0;
+		for(int i=0; i<teamList3.size(); i++) {
+			int v1 = teamList3.get(i);
+
+			if(v1 > max) {
+				max = v1;
+				maxIndex = i;
+			}
+		}
+		
+		return maxIndex;
 	}
 
 }

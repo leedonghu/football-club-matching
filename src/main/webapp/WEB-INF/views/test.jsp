@@ -22,6 +22,9 @@
 	${test.que5 }
 	${test.que6 }
 	${test.que7 }
+	<br>
+	<hr>
+	${teamIndex }
 </div>
 </body>
 </html>

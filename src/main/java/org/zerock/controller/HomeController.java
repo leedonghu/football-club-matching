@@ -55,8 +55,9 @@ public class HomeController {
 		log.info(vo.getQue1());
 		log.info(vo.getQue2());
 		
-		service.matchingProcess(vo);
+		int teamIndex = service.matchingProcess(vo);
 		model.addAttribute("test", vo);
+		model.addAttribute("teamIndex", teamIndex);
 	}
 	
 }
